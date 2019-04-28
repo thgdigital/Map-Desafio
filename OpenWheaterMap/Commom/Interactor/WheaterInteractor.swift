@@ -24,7 +24,7 @@ class WheaterInteractor: WheaterInteractorInput {
     
     var locationManager: LocationManager
     
-    var unit: Units = .imperial
+    var unit: Units = .metric
     
     var locationEntity: LocationEntity = LocationEntity()
     

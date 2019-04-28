@@ -7,6 +7,7 @@ target 'OpenWheaterMap' do
 
   # Pods for OpenWheaterMap
 pod 'Alamofire'
+pod 'SDWebImage', '4.4.6'
 pod 'ObjectMapper', '3.4.1'
 
   target 'OpenWheaterMapTests' do

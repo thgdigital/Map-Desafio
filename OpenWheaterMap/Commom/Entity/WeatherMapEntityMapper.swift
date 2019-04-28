@@ -24,7 +24,7 @@ class WeatherMapEntityMapper {
             entity.coordCity = LocationCityEntityMapper.make(model: coordCity)
         }
         if let weather = model.weather {
-            entity.weather = WeatherEntityMapper.make(model: weather)
+            entity.weather = weather.map({WeatherEntityMapper.make(model: $0)})
         }
         
         if let main = model.mainStatus {

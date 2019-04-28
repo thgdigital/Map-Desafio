@@ -12,6 +12,6 @@ class WeatherMapEntity: NSObject {
     var id: Int = 0
     var name: String = ""
     var coordCity: LocationCityEntity = LocationCityEntity()
-    var weather: WeatherEntity =  WeatherEntity()
+    var weather: [WeatherEntity] =  [WeatherEntity]()
     var mainStatus: MainStatusEntity = MainStatusEntity()
 }

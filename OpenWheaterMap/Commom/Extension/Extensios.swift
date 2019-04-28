@@ -9,6 +9,28 @@
 import Foundation
 import UIKit
 
+// MARK: - Reusable View
+
+protocol ReusableView: class {
+    static var defaultReuseIdentifier: String { get }
+}
+
+extension ReusableView where Self: UIViewController {
+    static var defaultReuseIdentifier: String {
+        return String(describing: self)
+    }
+}
+
+extension ReusableView where Self: UIView {
+    static var defaultReuseIdentifier: String {
+        return String(describing: self)
+    }
+}
+
+extension UIViewController: ReusableView {}
+
+extension UIView: ReusableView {}
+
 extension UIViewController {
     
     var isVisible: Bool { return self.isViewLoaded && self.view.window != nil }

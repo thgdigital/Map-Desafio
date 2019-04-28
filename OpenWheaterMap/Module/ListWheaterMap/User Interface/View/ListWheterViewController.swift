@@ -28,6 +28,13 @@ class ListWheterViewController: UIViewController {
         executeInBackground {
             self.presenter?.viewDidLoad()
         }
+        tableView.rowHeight = 130
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+        
+        let nibWeather = UINib(nibName: WeatherTableViewCell.defaultReuseIdentifier, bundle: nil)
+
+        tableView.register(nibWeather, forCellReuseIdentifier: WeatherTableViewCell.defaultReuseIdentifier)
+
     }
 }
 
@@ -38,8 +45,12 @@ extension ListWheterViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.defaultReuseIdentifier, for: indexPath) as! WeatherTableViewCell
+        let display = WeatherDisplayListMapper.make(item: self.item[indexPath.row])
         
-        return UITableViewCell()
+        cell.setupDisplay(display: display)
+        
+        return cell
     }
     
     

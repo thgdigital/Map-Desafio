@@ -60,4 +60,6 @@ extension LocationManager: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         self.output?.errorLocation(error: error)
     }
+    
+
 }

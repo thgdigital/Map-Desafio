@@ -16,11 +16,12 @@ class WeatherMapItemMapper {
         
         item.coordCity  = LocationCityItemMapper.make(entity: entity.coordCity)
         
-        item.weather = WheterItemMapper.make(entity: entity.weather)
+        item.weather = entity.weather.map({ WheterItemMapper.make(entity: $0)})
         
         item.id = entity.id
         
         item.name = entity.name
+        
         
         item.mainStatus = MainStatusItemMapper.make(entity: entity.mainStatus)
         

@@ -13,7 +13,7 @@ class WeatherMapModel: Mappable {
     var id: Int = 0
     var name: String = ""
     var coordCity: LocationCity?
-    var weather: WeatherModel?
+    var weather: [WeatherModel]?
     var mainStatus: MainStatus?
     
     
