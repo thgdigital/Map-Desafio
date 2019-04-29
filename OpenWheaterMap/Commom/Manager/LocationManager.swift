@@ -27,22 +27,21 @@ class LocationManager: NSObject {
     
     func startLocation(){
         let status = CLLocationManager.authorizationStatus()
+        locationMgr.delegate = self
+        locationMgr.desiredAccuracy = kCLLocationAccuracyKilometer
+        locationMgr.startUpdatingLocation()
         
         switch status {
         case .notDetermined:
             locationMgr.requestWhenInUseAuthorization()
             return
         case .denied, .restricted:
-           output?.disabledLocation()
+            output?.disabledLocation()
             return
         case .authorizedAlways, .authorizedWhenInUse:
             break
         }
-        
-        locationMgr.delegate = self
-        locationMgr.desiredAccuracy = kCLLocationAccuracyKilometer
-        locationMgr.startUpdatingLocation()
-        
+
         self.lastLocation()
     }
 }
@@ -63,8 +62,7 @@ extension LocationManager: CLLocationManagerDelegate {
         self.output?.errorLocation(error: error)
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {}
- 
+    
     fileprivate func lastLocation(){
         
         guard let location = self.location else { return }

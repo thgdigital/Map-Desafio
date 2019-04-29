@@ -18,6 +18,7 @@ protocol WheaterInteractorOutput: class {
     func fetched(items: [WeatherMapItem])
     func startLoading()
     func hiddenLoading()
+    func udpdateLocation(location: LocationEntity)
 }
 
 class WheaterInteractor: WheaterInteractorInput {
@@ -74,6 +75,7 @@ extension WheaterInteractor: LocationManagerOutput{
     func didUpdateLocation(coordinate: LocationEntity) {
         self.locationEntity = coordinate
         self.manager.fetch(location: locationEntity, units: unit)
+        self.output?.udpdateLocation(location: coordinate)
     }
     
     func errorLocation(error: Error) {

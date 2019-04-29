@@ -33,6 +33,8 @@ class WheaterPresenter: WheaterPresenterInput {
     var interactor: WheaterInteractorInput
     var wirefreame: SplitWireframe
     
+    let radius: Double = 30000
+    
     init(wirefreame: SplitWireframe, interactor: WheaterInteractorInput) {
         self.wirefreame = wirefreame
         self.interactor = interactor
@@ -40,7 +42,7 @@ class WheaterPresenter: WheaterPresenterInput {
     
     func viewDidLoad() {
         self.interactor.startLocation()
-        self.output?.startMap?(lat: -22.9035393, long: -43.2095869, radius: 5000)
+        self.output?.startMap?(lat: -22.9035393, long: -43.2095869, radius: radius)
     }
     
     func didChanger(with unit: Units) {
@@ -50,6 +52,10 @@ class WheaterPresenter: WheaterPresenterInput {
 
 extension WheaterPresenter: WheaterInteractorOutput {
     
+    func udpdateLocation(location: LocationEntity) {
+        self.output?.startMap?(lat: location.lat, long: location.lng, radius: radius)
+    }
+
     func startLoading() {
         self.output?.startLoading()
     }
