@@ -12,8 +12,8 @@ class ListWheaterMapWireframe {
     
     var viewController: ListWheterViewController?
     
-    func make(wireframe: SplitWireframe) -> UIViewController {
-        viewController = ListWheterViewControllerBuilder().make(wireframe: wireframe)
+    func make(wireframe: SplitWireframe, metric: Units) -> UIViewController {
+        viewController = ListWheterViewControllerBuilder().make(wireframe: wireframe, metric: metric)
         return viewController!
     }
 }

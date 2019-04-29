@@ -66,7 +66,12 @@ extension WheaterPresenter: WheaterInteractorOutput {
     }
     
     func didError(with error: Error) {
-        
+        switch error._code {
+        case -1001:
+            self.output?.alertView(title: "Opss Error", description: "Verificar sua conexão com celular")
+        default:
+             self.output?.alertView(title: "Opss Error", description: error.localizedDescription)
+        }
     }
     
     func disabledLocation() {

@@ -32,15 +32,15 @@ class WheaterInteractor: WheaterInteractorInput {
     
     weak var output: WheaterInteractorOutput?
     
-    init(manager: WheaterManager, locationManager: LocationManager) {
+    init(manager: WheaterManager, locationManager: LocationManager, metric: Units) {
         self.manager = manager
         self.locationManager = locationManager
+        self.unit = metric
     }
     
     func startLocation() {
         self.locationManager.startLocation()
         
-    
     }
     
     func didMetrict(unit: Units) {

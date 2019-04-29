@@ -63,9 +63,7 @@ extension LocationManager: CLLocationManagerDelegate {
         self.output?.errorLocation(error: error)
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        debugPrint(status)
-    }
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {}
  
     fileprivate func lastLocation(){
         

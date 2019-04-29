@@ -11,9 +11,9 @@ import Foundation
 
 class WheaterPresenterBuilder {
     
-    static func make(wirefreame: SplitWireframe) -> WheaterPresenter {
+    static func make(wirefreame: SplitWireframe, metric: Units) -> WheaterPresenter {
         
-        let interactor = WheaterInteractorBuilder.make()
+        let interactor = WheaterInteractorBuilder.make(metric: metric)
         
         let presenter = WheaterPresenter(wirefreame: wirefreame, interactor: interactor)
         

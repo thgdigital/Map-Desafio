@@ -63,7 +63,7 @@ extension WheaterMapViewController: WheaterPresenterOuput {
     
     func startLoading() {
         executeOnMainQueue {
-            self.navigationController?.view.showActivityView(withLabel: "Buscando Dados..")
+            self.navigationController?.view.showActivityView()
         }
     }
     

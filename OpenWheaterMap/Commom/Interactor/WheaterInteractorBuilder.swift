@@ -10,13 +10,13 @@ import Foundation
 
 class WheaterInteractorBuilder {
     
-    static func make() -> WheaterInteractor {
+    static func make(metric: Units) -> WheaterInteractor {
         
         let manager = WheaterManager.shared
         
         let locationManager = LocationManager.shared
         
-        let interactor = WheaterInteractor(manager: manager, locationManager: locationManager)
+        let interactor = WheaterInteractor(manager: manager, locationManager: locationManager, metric: metric)
         
         manager.output = interactor
         

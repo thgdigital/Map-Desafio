@@ -12,8 +12,8 @@ class WheaterMapWireframe {
     
     var viewController: WheaterMapViewController?
     
-    func make(wireframe: SplitWireframe) -> WheaterMapViewController {
-        viewController = WheaterMapViewControllerBuilder().makeScreen(wireframe: wireframe)
+    func make(wireframe: SplitWireframe, metric: Units) -> WheaterMapViewController {
+        viewController = WheaterMapViewControllerBuilder().makeScreen(wireframe: wireframe, metric: metric)
         return viewController!
     }
 }

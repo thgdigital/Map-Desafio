@@ -45,7 +45,7 @@ class SplitPresenter: SplitPresenterInput {
     func viewWillAppear() {}
     
     func viewDidLoad() {
-        wireframe.mapScreen()
+        wireframe.mapScreen(metric: self.metric)
     }
     
     func didTapTemp() {
@@ -66,11 +66,11 @@ class SplitPresenter: SplitPresenterInput {
         case .map:
             self.viewStates = .list
             self.output?.changeTitleView(nameImage: "list")
-            self.wireframe.listScreen()
+            self.wireframe.listScreen(metric: self.metric)
         default:
             self.viewStates = .map
             self.output?.changeTitleView(nameImage: "map")
-            self.wireframe.mapScreen()
+            self.wireframe.mapScreen(metric: self.metric)
         }
     }
 }

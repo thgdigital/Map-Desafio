@@ -12,11 +12,11 @@ class ListWheterViewControllerBuilder: StoryboardInstanciate {
     
     var storyboardName: String = "ListWheaterMap"
     
-    func make(wireframe: SplitWireframe) -> ListWheterViewController {
+    func make(wireframe: SplitWireframe, metric: Units) -> ListWheterViewController {
         
         let viewController = viewControllerFromStoryboard(withIdentifier: "ListWheterViewController") as! ListWheterViewController
         
-        let presenter = WheaterPresenterBuilder.make(wirefreame: wireframe)
+        let presenter = WheaterPresenterBuilder.make(wirefreame: wireframe, metric: metric)
         
         viewController.presenter = presenter
         

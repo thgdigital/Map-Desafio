@@ -13,12 +13,12 @@ class WheaterMapViewControllerBuilder: StoryboardInstanciate {
     
     var storyboardName: String = "WheaterMap"
     
-    func makeScreen(wireframe: SplitWireframe) -> WheaterMapViewController {
+    func makeScreen(wireframe: SplitWireframe, metric: Units) -> WheaterMapViewController {
         
         let viewController = viewControllerFromStoryboard(withIdentifier: "WheaterMapViewController") as! WheaterMapViewController
         
-        let presenter = WheaterPresenterBuilder.make(wirefreame: wireframe)
-        
+        let presenter = WheaterPresenterBuilder.make(wirefreame: wireframe, metric: metric)
+                
         viewController.presenter = presenter
         
         presenter.output = viewController

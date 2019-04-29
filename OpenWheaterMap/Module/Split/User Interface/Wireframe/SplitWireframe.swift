@@ -18,7 +18,7 @@ class SplitWireframe {
         return viewController!
     }
     
-    func listScreen(){
+    func listScreen(metric: Units){
 
         executeOnMainQueue {
             
@@ -26,7 +26,7 @@ class SplitWireframe {
            
             self.removeAll(container: viewController.containerView, viewController: self.viewController)
             
-            let listViewcontroller = ListWheaterMapWireframe().make(wireframe: self)
+            let listViewcontroller = ListWheaterMapWireframe().make(wireframe: self, metric: metric)
             
             self.addView(view: listViewcontroller.view, container: viewController.containerView)
 
@@ -35,7 +35,7 @@ class SplitWireframe {
         }
     }
     
-    func mapScreen(){
+    func mapScreen(metric: Units){
         
         executeOnMainQueue {
             
@@ -43,7 +43,7 @@ class SplitWireframe {
             
             self.removeAll(container: viewController.containerView, viewController: self.viewController)
             
-            let listViewcontroller = WheaterMapWireframe().make(wireframe: self)
+            let listViewcontroller = WheaterMapWireframe().make(wireframe: self, metric: metric)
             
             self.addView(view: listViewcontroller.view, container: viewController.containerView)
             
