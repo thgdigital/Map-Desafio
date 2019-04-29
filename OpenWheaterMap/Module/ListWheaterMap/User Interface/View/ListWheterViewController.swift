@@ -48,13 +48,10 @@ extension ListWheterViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.defaultReuseIdentifier, for: indexPath) as! WeatherTableViewCell
         let display = WeatherDisplayListMapper.make(item: self.item[indexPath.row])
-        
         cell.setupDisplay(display: display)
         
         return cell
     }
-    
-    
 }
 
 extension ListWheterViewController: WheaterPresenterOuput {
@@ -68,8 +65,7 @@ extension ListWheterViewController: WheaterPresenterOuput {
     
     func alertView(title: String, description: String) {
         executeOnMainQueue {
-            let alertController = UIAlertController(title: title, message: description, preferredStyle: .alert)
-            self.present(alertController, animated: true, completion: nil)
+            UIAlertController.showAlert(title: title, message: description, cancelButtonTitle: "OK", viewController:self)
         }
     }
 }
