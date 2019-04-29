@@ -25,6 +25,8 @@ class ListWheterViewController: UIViewController {
         
         self.tableView.dataSource = self
         
+        self.tableView.allowsSelection = false
+        
         self.tableView.tableFooterView = UIView()
         
         executeInBackground {
@@ -72,7 +74,6 @@ extension ListWheterViewController: WheaterPresenterOuput {
 
         }
     }
-    
     
     func fetched(items: [WeatherMapItem]) {
         executeOnMainQueue {
