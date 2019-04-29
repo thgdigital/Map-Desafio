@@ -17,9 +17,9 @@ class  ArtworkItemMap {
         mapPin.id = item.id
         if let weather = item.weather.first {
             mapPin.urlImage = "\(urlImage)\(weather.icon).png"
+            mapPin.subtitle = "\(weather.message)"
         }
         mapPin.title = "\(item.mainStatus.temp) °"
-//        mapPin.subtitle = "\(item.mainStatus.temp) °"
         mapPin.coordinate = CLLocationCoordinate2DMake(item.coordCity.lat, item.coordCity.lon)
 
         return mapPin
