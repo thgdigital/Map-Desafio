@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct WeatherMapItem {
+class WeatherMapItem:  NSObject {
     var id: Int = 0
     var name: String = ""
     var coordCity: LocationCityItem = LocationCityItem()

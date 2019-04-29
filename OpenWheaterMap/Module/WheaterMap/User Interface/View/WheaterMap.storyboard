@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wheater Map View Controller-->
+        <scene sceneID="oxg-ZE-4aX">
+            <objects>
+                <viewController storyboardIdentifier="WheaterMapViewController" id="C24-Te-QxF" customClass="WheaterMapViewController" customModule="OpenWheaterMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G85-OF-KVu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OZF-xc-qEZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wos-rz-4Hy" firstAttribute="trailing" secondItem="OZF-xc-qEZ" secondAttribute="trailing" id="2jp-9X-MPC"/>
+                            <constraint firstItem="OZF-xc-qEZ" firstAttribute="top" secondItem="Wos-rz-4Hy" secondAttribute="top" id="ALH-A4-rsv"/>
+                            <constraint firstItem="OZF-xc-qEZ" firstAttribute="leading" secondItem="Wos-rz-4Hy" secondAttribute="leading" id="VaA-RZ-sBY"/>
+                            <constraint firstItem="Wos-rz-4Hy" firstAttribute="bottom" secondItem="OZF-xc-qEZ" secondAttribute="bottom" id="VjA-Jb-72K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wos-rz-4Hy"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="OZF-xc-qEZ" id="fun-HV-6Jq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9o-Vm-hs0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

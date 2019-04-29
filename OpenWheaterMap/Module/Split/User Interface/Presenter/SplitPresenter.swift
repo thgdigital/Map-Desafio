@@ -12,9 +12,19 @@ protocol SplitPresenterInput {
     func viewDidLoad()
     func viewWillAppear()
 }
+
+enum ViewStates: String {
+    case map = "map"
+    case list = "list"
+}
+
 class SplitPresenter: SplitPresenterInput {
     
     var wireframe: SplitWireframe
+    
+    var viewStates: ViewStates = .map
+    
+    var metric: Units = .metric
     
     init(wireframe: SplitWireframe) {
         self.wireframe = wireframe
@@ -23,6 +33,6 @@ class SplitPresenter: SplitPresenterInput {
     func viewWillAppear() {}
     
     func viewDidLoad(){
-        wireframe.ListScreen()
+        wireframe.mapScreen()
     }
 }

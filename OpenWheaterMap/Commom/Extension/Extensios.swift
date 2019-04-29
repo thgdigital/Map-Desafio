@@ -31,6 +31,38 @@ extension UIViewController: ReusableView {}
 
 extension UIView: ReusableView {}
 
+extension UIAlertController {
+    
+    func show(_ viewController: UIViewController? = nil) {
+        
+        let topViewController = viewController
+        
+        topViewController?.present(self, animated: true, completion: nil)
+    }
+    
+    static func showAlert(title: String, message: String, cancelButtonTitle: String? = nil, confirmationButtonTitle: String? = nil, viewController: UIViewController? = nil, dismissBlock: (()-> Void)? = nil , cancelBlock: (()-> Void)? = nil) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        // Cancel Button
+        if cancelButtonTitle != nil {
+            alert.addAction(UIAlertAction(title: cancelButtonTitle, style: UIAlertAction.Style.cancel, handler: { (action) -> Void in
+                cancelBlock?()
+            }))
+        }
+        // Confirmation button
+        if confirmationButtonTitle != nil {
+            alert.addAction(UIAlertAction(title: confirmationButtonTitle, style: UIAlertAction.Style.default, handler: { (action) -> Void in
+                dismissBlock?()
+            }))
+        }
+        
+        // Show
+        DispatchQueue.main.async {
+            alert.show(viewController)
+        }
+    }
+}
+
 extension UIViewController {
     
     var isVisible: Bool { return self.isViewLoaded && self.view.window != nil }

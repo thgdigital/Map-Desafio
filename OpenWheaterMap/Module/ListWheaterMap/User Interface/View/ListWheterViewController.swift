@@ -34,8 +34,9 @@ class ListWheterViewController: UIViewController {
         let nibWeather = UINib(nibName: WeatherTableViewCell.defaultReuseIdentifier, bundle: nil)
 
         tableView.register(nibWeather, forCellReuseIdentifier: WeatherTableViewCell.defaultReuseIdentifier)
-
     }
+    
+ 
 }
 
 extension ListWheterViewController: UITableViewDelegate, UITableViewDataSource{
@@ -63,7 +64,6 @@ extension ListWheterViewController: WheaterPresenterOuput {
             self.item = items
             self.tableView.reloadData()
         }
-       
     }
     
     func alertView(title: String, description: String) {
@@ -72,6 +72,4 @@ extension ListWheterViewController: WheaterPresenterOuput {
             self.present(alertController, animated: true, completion: nil)
         }
     }
-    
-    
 }

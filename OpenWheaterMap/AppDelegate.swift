@@ -20,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.rootViewController = UINavigationController(rootViewController: SplitWireframe().make())
         
+        UINavigationBar.appearance().barTintColor = UIColor(red: 210.0/255.0, green: 138.0/255.0, blue: 33.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor.clear
+        
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+
+        
         self.window?.makeKeyAndVisible()
         
         return true

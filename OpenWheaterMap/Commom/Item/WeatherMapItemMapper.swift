@@ -12,7 +12,7 @@ class WeatherMapItemMapper {
     
     static func make(entity: WeatherMapEntity) ->WeatherMapItem {
        
-        var item = WeatherMapItem()
+        let item = WeatherMapItem()
         
         item.coordCity  = LocationCityItemMapper.make(entity: entity.coordCity)
         

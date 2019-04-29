@@ -23,6 +23,8 @@ class WheaterManager {
     
     static var shared = WheaterManager()
     
+    var request: Request? = nil
+    
     func fetch(lat: Double, lng: Double, units: Units){
         
         let parameters: Parameters = [
@@ -34,16 +36,18 @@ class WheaterManager {
             "units": units.rawValue
         ]
         
-        Alamofire.request(baseUrl, parameters: parameters).responseJSON { response in
+       request = Alamofire.request(baseUrl, parameters: parameters).responseJSON { response in
             
             switch response.result {
                 
             case .success:
+                
                 guard  let listItem = Mapper<ListWeatherMapModel>().map(JSONObject:response.result.value) else { return }
                 
                self.output?.fetch(entity: ListWeatherEntityMapper.make(model: listItem))
                 
             case .failure(let error):
+                
                 self.output?.error(error: error)
             }
         }
