@@ -16,6 +16,8 @@ protocol WheaterInteractorOutput: class {
     func didError(with error: Error)
     func disabledLocation()
     func fetched(items: [WeatherMapItem])
+    func startLoading()
+    func hiddenLoading()
 }
 
 class WheaterInteractor: WheaterInteractorInput {
@@ -40,11 +42,20 @@ class WheaterInteractor: WheaterInteractorInput {
     }
     
     func didMetrict(unit: Units) {
-        self.manager.fetch(lat: locationEntity.lat, lng: locationEntity.lng, units: unit)
+        self.manager.fetch(location: locationEntity, units: unit)
     }
 }
 
 extension WheaterInteractor: WheaterManagerOutput {
+    
+    func startLoading() {
+        self.output?.startLoading()
+    }
+    
+    func hiddenLoading() {
+        self.output?.hiddenLoading()
+    }
+    
     
     func fetch(entity: ListWeatherEntity) {
         self.output?.fetched(items: entity.weatherMap.map({ WeatherMapItemMapper.make(entity: $0) }))
@@ -60,7 +71,7 @@ extension WheaterInteractor: LocationManagerOutput{
     
     func didUpdateLocation(coordinate: LocationEntity) {
         self.locationEntity = coordinate
-        self.manager.fetch(lat: coordinate.lat, lng: coordinate.lng, units: unit)
+       self.manager.fetch(location: locationEntity, units: unit)
     }
     
     func errorLocation(error: Error) {

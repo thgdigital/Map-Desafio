@@ -12,8 +12,10 @@ class SplitPresenterBuilder {
     
     static func make(wireframe: SplitWireframe) -> SplitPresenter {
         
-        let presenter = SplitPresenter(wireframe: wireframe)
+        let interactor = SplitInterarctorBuilder.make()
         
+        let presenter = SplitPresenter(wireframe: wireframe, interactor: interactor)
+    
         return presenter
     }
 }

@@ -4,15 +4,16 @@
 target 'OpenWheaterMap' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for OpenWheaterMap
-pod 'Alamofire'
-pod 'SDWebImage', '4.4.6'
-pod 'ObjectMapper', '3.4.1'
-
+  pod 'Alamofire'
+  pod 'SDWebImage', '4.4.6'
+  pod 'ObjectMapper', '3.4.1'
+  pod 'RNActivityView'
+  
   target 'OpenWheaterMapTests' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
 end

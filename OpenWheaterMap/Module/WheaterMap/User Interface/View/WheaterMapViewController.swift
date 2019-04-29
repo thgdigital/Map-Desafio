@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 import SDWebImage
+import RNActivityView
 
 class WheaterMapViewController: UIViewController {
     
@@ -59,6 +60,19 @@ extension WheaterMapViewController: MKMapViewDelegate {
 }
 
 extension WheaterMapViewController: WheaterPresenterOuput {
+    
+    func startLoading() {
+        executeOnMainQueue {
+            self.navigationController?.view.showActivityView(withLabel: "Buscando Dados..")
+        }
+    }
+    
+    func hiddenLoading() {
+        executeOnMainQueue {
+            self.navigationController?.view.hideActivityView()
+            
+        }
+    }
     
     func startMap(lat: Double, long: Double, radius: Double) {
         

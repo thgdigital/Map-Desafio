@@ -11,6 +11,13 @@ import Foundation
 protocol SplitPresenterInput {
     func viewDidLoad()
     func viewWillAppear()
+    func didTapTemp()
+    func didTapView()
+}
+
+protocol SplitPresenterOutput: class {
+    func changeTitleTemp(nameImage: String)
+    func changeTitleView(nameImage: String)
 }
 
 enum ViewStates: String {
@@ -24,15 +31,46 @@ class SplitPresenter: SplitPresenterInput {
     
     var viewStates: ViewStates = .map
     
+    var interactor: SplitInterarctor
+    
+    var output: SplitPresenterOutput?
+    
     var metric: Units = .metric
     
-    init(wireframe: SplitWireframe) {
+    init(wireframe: SplitWireframe, interactor: SplitInterarctor) {
         self.wireframe = wireframe
+        self.interactor = interactor
     }
     
     func viewWillAppear() {}
     
-    func viewDidLoad(){
+    func viewDidLoad() {
         wireframe.mapScreen()
+    }
+    
+    func didTapTemp() {
+        switch metric {
+        case .imperial:
+            metric = .metric
+            output?.changeTitleTemp(nameImage: "celsius")
+        default:
+            metric = .imperial
+            output?.changeTitleTemp(nameImage: "fahrenheit")
+        }
+        
+        self.interactor.didChanger(temp: metric)
+    }
+    
+    func didTapView(){
+        switch viewStates {
+        case .map:
+            self.viewStates = .list
+            self.output?.changeTitleView(nameImage: "list")
+            self.wireframe.listScreen()
+        default:
+            self.viewStates = .map
+            self.output?.changeTitleView(nameImage: "map")
+            self.wireframe.mapScreen()
+        }
     }
 }

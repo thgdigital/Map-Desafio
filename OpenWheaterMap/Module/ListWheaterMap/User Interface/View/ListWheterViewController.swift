@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RNActivityView
 
 class ListWheterViewController: UIViewController {
     
@@ -21,6 +22,7 @@ class ListWheterViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableView.delegate = self
+        
         self.tableView.dataSource = self
         
         self.tableView.tableFooterView = UIView()
@@ -28,7 +30,9 @@ class ListWheterViewController: UIViewController {
         executeInBackground {
             self.presenter?.viewDidLoad()
         }
+        
         tableView.rowHeight = 130
+       
         tableView.estimatedRowHeight = UITableView.automaticDimension
         
         let nibWeather = UINib(nibName: WeatherTableViewCell.defaultReuseIdentifier, bundle: nil)
@@ -55,6 +59,20 @@ extension ListWheterViewController: UITableViewDelegate, UITableViewDataSource{
 }
 
 extension ListWheterViewController: WheaterPresenterOuput {
+    
+    func startLoading() {
+        executeOnMainQueue {
+            self.navigationController?.view.showActivityView()
+        }
+    }
+    
+    func hiddenLoading() {
+        executeOnMainQueue {
+            self.navigationController?.view.hideActivityView()
+
+        }
+    }
+    
     
     func fetched(items: [WeatherMapItem]) {
         executeOnMainQueue {

@@ -19,6 +19,7 @@ class ListWeatherMapModel: Mappable {
     required init?(map: Map) {}
     
     func mapping(map: Map) {
+        
         message <- map["message"]
         cod <- map["cod"]
         count <- map["count"]

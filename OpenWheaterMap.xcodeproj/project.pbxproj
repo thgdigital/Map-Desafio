@@ -64,6 +64,8 @@
 		AF7A981A227665B8001DA3A1 /* WheaterMapWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9819227665B8001DA3A1 /* WheaterMapWireframe.swift */; };
 		AF7A981F22767108001DA3A1 /* ArtworkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A981E22767108001DA3A1 /* ArtworkItem.swift */; };
 		AF7A982122772909001DA3A1 /* ArtworkItemMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A982022772909001DA3A1 /* ArtworkItemMap.swift */; };
+		AF7A9825227770D1001DA3A1 /* SplitInterarctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9824227770D1001DA3A1 /* SplitInterarctor.swift */; };
+		AF7A98272277717C001DA3A1 /* SplitInterarctorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A98262277717C001DA3A1 /* SplitInterarctorBuilder.swift */; };
 		BA206D6645C9AE5802F0C1FF /* Pods_OpenWheaterMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD0CEFFC15ABED7C025A139 /* Pods_OpenWheaterMapTests.framework */; };
 		C27B559B9A9EEB06A196372E /* Pods_OpenWheaterMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE70531506A154DF99B2953 /* Pods_OpenWheaterMap.framework */; };
 /* End PBXBuildFile section */
@@ -142,6 +144,8 @@
 		AF7A9819227665B8001DA3A1 /* WheaterMapWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterMapWireframe.swift; sourceTree = "<group>"; };
 		AF7A981E22767108001DA3A1 /* ArtworkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkItem.swift; sourceTree = "<group>"; };
 		AF7A982022772909001DA3A1 /* ArtworkItemMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkItemMap.swift; sourceTree = "<group>"; };
+		AF7A9824227770D1001DA3A1 /* SplitInterarctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitInterarctor.swift; sourceTree = "<group>"; };
+		AF7A98262277717C001DA3A1 /* SplitInterarctorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitInterarctorBuilder.swift; sourceTree = "<group>"; };
 		C0EAE216CB28D0C99C3E166F /* Pods-OpenWheaterMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWheaterMapTests.debug.xcconfig"; path = "Target Support Files/Pods-OpenWheaterMapTests/Pods-OpenWheaterMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D8AF160D71BBEB7B6D672CCE /* Pods-OpenWheaterMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenWheaterMap.debug.xcconfig"; path = "Target Support Files/Pods-OpenWheaterMap/Pods-OpenWheaterMap.debug.xcconfig"; sourceTree = "<group>"; };
 		EBD0CEFFC15ABED7C025A139 /* Pods_OpenWheaterMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenWheaterMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +256,7 @@
 		AF7A979F22747C37001DA3A1 /* Split */ = {
 			isa = PBXGroup;
 			children = (
+				AF7A982222777083001DA3A1 /* Application Logic */,
 				AF7A97C42274CC8B001DA3A1 /* User Interface */,
 			);
 			path = Split;
@@ -457,6 +462,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AF7A982222777083001DA3A1 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A9823227770AD001DA3A1 /* Interactor */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		AF7A9823227770AD001DA3A1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A9824227770D1001DA3A1 /* SplitInterarctor.swift */,
+				AF7A98262277717C001DA3A1 /* SplitInterarctorBuilder.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -572,6 +594,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-OpenWheaterMap/Pods-OpenWheaterMap-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RNActivityView/RNActivityView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -580,6 +603,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNActivityView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,6 +686,7 @@
 				AF7A97D02274D0BC001DA3A1 /* ListWheaterMapWireframe.swift in Sources */,
 				AF7A97A122747C71001DA3A1 /* SplitWireframe.swift in Sources */,
 				AF7A97B72274A887001DA3A1 /* WeatherModel.swift in Sources */,
+				AF7A9825227770D1001DA3A1 /* SplitInterarctor.swift in Sources */,
 				AF7A981622766409001DA3A1 /* WheaterMapViewController.swift in Sources */,
 				AF7A97E322761C33001DA3A1 /* WeatherMapEntity.swift in Sources */,
 				AF7A97C22274C9AF001DA3A1 /* SplitViewControllerBuilder.swift in Sources */,
@@ -673,6 +698,7 @@
 				AF7A9802227629CC001DA3A1 /* WheterItemMapper.swift in Sources */,
 				AF7A97A722747CFC001DA3A1 /* WheaterManager.swift in Sources */,
 				AF7A9809227635AC001DA3A1 /* WeatherTableViewCell.swift in Sources */,
+				AF7A98272277717C001DA3A1 /* SplitInterarctorBuilder.swift in Sources */,
 				AF7A97FA22762712001DA3A1 /* LocationCityItemMapper.swift in Sources */,
 				AF7A980622762B3D001DA3A1 /* MainStatusItemMapper.swift in Sources */,
 				AF7A980C22763C2D001DA3A1 /* WeatherDisplayList.swift in Sources */,

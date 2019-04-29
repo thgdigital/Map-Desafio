@@ -15,6 +15,8 @@ protocol WheaterPresenterInput {
 
 @objc protocol WheaterPresenterOuput: NSObjectProtocol {
     @objc func alertView(title: String, description: String)
+    @objc func startLoading()
+    @objc func hiddenLoading()
     @objc optional func fetched(items: [WeatherMapItem])
     @objc optional func fetched(artworkItem: [ArtworkItem])
     @objc optional func startMap(lat: Double, long: Double, radius: Double)
@@ -39,6 +41,7 @@ class WheaterPresenter: WheaterPresenterInput {
     func viewDidLoad() {
         self.interactor.startLocation()
         self.output?.startMap?(lat: -22.9035393, long: -43.2095869, radius: 5000)
+        self.output?.startLoading()
     }
     
     func didChanger(with unit: Units) {
@@ -48,9 +51,20 @@ class WheaterPresenter: WheaterPresenterInput {
 
 extension WheaterPresenter: WheaterInteractorOutput {
     
+    func startLoading() {
+        self.output?.startLoading()
+    }
+    
+    func hiddenLoading() {
+        self.output?.hiddenLoading()
+        
+    }
+    
+    
     func fetched(items: [WeatherMapItem]) {
         self.output?.fetched?(items: items)
         self.output?.fetched?(artworkItem: ArtworkItemMap.make(from: items))
+        
     }
     
     func didError(with error: Error) {
@@ -58,6 +72,7 @@ extension WheaterPresenter: WheaterInteractorOutput {
     }
     
     func disabledLocation() {
+        self.output?.hiddenLoading()
         self.output?.alertView(title: "Opss Error", description: "Sua localizão esta desativada")
     }
     

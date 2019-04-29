@@ -14,10 +14,10 @@ class SplitViewControllerBuilder: StoryboardInstanciate {
     var storyboardName: String = "Main"
     
     func make(wireframe: SplitWireframe) -> SplitViewController {
-        
         let viewController = viewControllerFromStoryboard(withIdentifier: "SplitViewController") as! SplitViewController
-        viewController.presenter = SplitPresenterBuilder.make(wireframe: wireframe)
-        
+        let presenter = SplitPresenterBuilder.make(wireframe: wireframe)
+        viewController.presenter = presenter
+        presenter.output = viewController
         return viewController
     }
 }
