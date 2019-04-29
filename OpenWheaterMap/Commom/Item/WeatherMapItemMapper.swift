@@ -10,13 +10,13 @@ import Foundation
 
 class WeatherMapItemMapper {
     
-    static func make(entity: WeatherMapEntity) ->WeatherMapItem {
+    static func make(from entity: WeatherMapEntity) ->WeatherMapItem {
        
         let item = WeatherMapItem()
         
         item.coordCity  = LocationCityItemMapper.make(entity: entity.coordCity)
-        
-        item.weather = entity.weather.map({ WheterItemMapper.make(entity: $0)})
+
+        item.weather = WheterItemMapper.make(from: entity.weather)
         
         item.id = entity.id
         
@@ -26,5 +26,9 @@ class WeatherMapItemMapper {
         item.mainStatus = MainStatusItemMapper.make(entity: entity.mainStatus)
         
         return item
+    }
+    
+    static func make(from entity: [WeatherMapEntity]) -> [WeatherMapItem] {
+        return entity.map({ make(from: $0)})
     }
 }

@@ -12,7 +12,7 @@ import ObjectMapper
 
 class WeatherMapEntityMapper {
     
-    static func make(model: WeatherMapModel) -> WeatherMapEntity {
+    static func make(from model: WeatherMapModel) -> WeatherMapEntity {
         
         let entity = WeatherMapEntity()
         
@@ -24,7 +24,7 @@ class WeatherMapEntityMapper {
             entity.coordCity = LocationCityEntityMapper.make(model: coordCity)
         }
         if let weather = model.weather {
-            entity.weather = weather.map({WeatherEntityMapper.make(model: $0)})
+            entity.weather =  WeatherEntityMapper.make(from: weather)
         }
         
         if let main = model.mainStatus {
@@ -32,5 +32,9 @@ class WeatherMapEntityMapper {
         }
         
         return entity
+    }
+    
+    static func make(from model: [WeatherMapModel]) -> [WeatherMapEntity] {
+        return model.map({ make(from: $0) })
     }
 }

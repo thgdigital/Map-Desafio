@@ -60,7 +60,7 @@ extension WheaterInteractor: WheaterManagerOutput {
     
     
     func fetch(entity: ListWeatherEntity) {
-        self.output?.fetched(items: entity.weatherMap.map({ WeatherMapItemMapper.make(entity: $0) }))
+        self.output?.fetched(items: WeatherMapItemMapper.make(from: entity.weatherMap))
     }
     
     func error(error: Error) {

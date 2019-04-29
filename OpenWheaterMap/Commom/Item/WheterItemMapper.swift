@@ -11,12 +11,16 @@ import Foundation
 
 class WheterItemMapper {
     
-    static func make(entity: WeatherEntity) -> WheterItem {
+    static func make(from entity: WeatherEntity) -> WheterItem {
         var item = WheterItem()
         item.icon = entity.icon
         item.id = entity.id
         item.main = entity.main
         item.message = entity.message
         return item
+    }
+    
+    static func make(from entity: [WeatherEntity]) -> [WheterItem] {
+        return entity.map({ make(from: $0 )})
     }
 }

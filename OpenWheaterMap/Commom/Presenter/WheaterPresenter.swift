@@ -56,7 +56,6 @@ extension WheaterPresenter: WheaterInteractorOutput {
     
     func hiddenLoading() {
         self.output?.hiddenLoading()
-        
     }
     
     

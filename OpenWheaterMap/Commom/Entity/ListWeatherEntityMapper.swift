@@ -16,7 +16,7 @@ class ListWeatherEntityMapper {
         entity.cod = model.cod
         entity.count = model.count
         entity.message = model.message
-        entity.weatherMap = model.weatherMap.compactMap({ WeatherMapEntityMapper.make(model: $0)})
+        entity.weatherMap =  WeatherMapEntityMapper.make(from: model.weatherMap)
         return entity
     }
 }

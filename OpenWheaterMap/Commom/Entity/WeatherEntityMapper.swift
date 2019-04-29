@@ -10,12 +10,16 @@ import Foundation
 
 class WeatherEntityMapper {
     
-    static func make(model: WeatherModel) -> WeatherEntity {
+    static func make(from model: WeatherModel) -> WeatherEntity {
         let entity = WeatherEntity()
         entity.icon = model.icon
         entity.id = model.id
         entity.main = model.main
         entity.message = model.description
         return entity
+    }
+    
+    static func make(from model: [WeatherModel]) -> [WeatherEntity] {
+        return model.map({ make(from: $0) })
     }
 }
