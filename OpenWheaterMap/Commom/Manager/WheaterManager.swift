@@ -28,13 +28,14 @@ class WheaterManager {
     var location: LocationEntity? = nil
     
     func shouldTemp(units: Units){
-        self.output?.startLoading()
         if let location = self.location {
             self.fetch(location: location, units: units)
         }
     }
     
     func fetch(location: LocationEntity, units: Units){
+        self.output?.startLoading()
+        
         self.location = location
         
         let parameters: Parameters = [

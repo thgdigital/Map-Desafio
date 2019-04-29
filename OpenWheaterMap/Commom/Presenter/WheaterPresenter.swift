@@ -41,7 +41,6 @@ class WheaterPresenter: WheaterPresenterInput {
     func viewDidLoad() {
         self.interactor.startLocation()
         self.output?.startMap?(lat: -22.9035393, long: -43.2095869, radius: 5000)
-        self.output?.startLoading()
     }
     
     func didChanger(with unit: Units) {

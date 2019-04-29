@@ -23,37 +23,39 @@ class LocationManager: NSObject {
     
     let locationMgr = CLLocationManager()
     
+    var location: LocationEntity?
+    
     func startLocation(){
-        
         let status = CLLocationManager.authorizationStatus()
         
         switch status {
-        // 1
         case .notDetermined:
             locationMgr.requestWhenInUseAuthorization()
             return
-            
-        // 2
         case .denied, .restricted:
            output?.disabledLocation()
             return
         case .authorizedAlways, .authorizedWhenInUse:
             break
-            
         }
         
         locationMgr.delegate = self
         locationMgr.desiredAccuracy = kCLLocationAccuracyKilometer
-        
         locationMgr.startUpdatingLocation()
+        
+        self.lastLocation()
     }
 }
 extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:[CLLocation]) {
         
-        guard let location = locations.first else { return }
+        guard let location = locations.first else {
+            self.lastLocation()
+            return
+        }
         
+        self.location = LocationEntityMapper.make(from: location.coordinate)
         self.output?.didUpdateLocation(coordinate: LocationEntityMapper.make(from: location.coordinate))
     }
     
@@ -61,4 +63,10 @@ extension LocationManager: CLLocationManagerDelegate {
         self.output?.errorLocation(error: error)
     }
  
+    fileprivate func lastLocation(){
+        
+        guard let location = self.location else { return }
+        
+        self.output?.didUpdateLocation(coordinate: location)
+    }
 }

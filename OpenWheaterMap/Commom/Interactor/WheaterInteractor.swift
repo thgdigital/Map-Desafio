@@ -39,6 +39,8 @@ class WheaterInteractor: WheaterInteractorInput {
     
     func startLocation() {
         self.locationManager.startLocation()
+        
+    
     }
     
     func didMetrict(unit: Units) {
@@ -71,7 +73,7 @@ extension WheaterInteractor: LocationManagerOutput{
     
     func didUpdateLocation(coordinate: LocationEntity) {
         self.locationEntity = coordinate
-       self.manager.fetch(location: locationEntity, units: unit)
+        self.manager.fetch(location: locationEntity, units: unit)
     }
     
     func errorLocation(error: Error) {
