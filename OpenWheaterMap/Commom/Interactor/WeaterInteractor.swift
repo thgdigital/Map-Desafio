@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol WheaterInteractorInput {
+protocol WeaterInteractorInput {
     func startLocation()
     func didMetrict(unit: Units)
 }
-protocol WheaterInteractorOutput: class {
+protocol WeaterInteractorOutput: class {
     func didError(with error: Error)
     func disabledLocation()
     func fetched(items: [WeatherMapItem])
@@ -21,9 +21,9 @@ protocol WheaterInteractorOutput: class {
     func udpdateLocation(location: LocationEntity)
 }
 
-class WheaterInteractor: WheaterInteractorInput {
+class WeaterInteractor: WeaterInteractorInput {
 
-    var manager: WheaterManager
+    var manager: WeaterManager
     
     var locationManager: LocationManager
     
@@ -33,9 +33,9 @@ class WheaterInteractor: WheaterInteractorInput {
     
     var listWeatherEntity = ListWeatherEntity()
     
-    weak var output: WheaterInteractorOutput?
+    weak var output: WeaterInteractorOutput?
     
-    init(manager: WheaterManager, locationManager: LocationManager, metric: Units) {
+    init(manager: WeaterManager, locationManager: LocationManager, metric: Units) {
         self.manager = manager
         self.locationManager = locationManager
         self.unit = metric
@@ -51,7 +51,7 @@ class WheaterInteractor: WheaterInteractorInput {
     }
 }
 
-extension WheaterInteractor: WheaterManagerOutput {
+extension WeaterInteractor: WeaterManagerOutput {
     
     func startLoading() {
         self.output?.startLoading()
@@ -73,7 +73,7 @@ extension WheaterInteractor: WheaterManagerOutput {
     
 }
 
-extension WheaterInteractor: LocationManagerOutput{
+extension WeaterInteractor: LocationManagerOutput{
     
     func didUpdateLocation(coordinate: LocationEntity) {
         self.locationEntity = coordinate

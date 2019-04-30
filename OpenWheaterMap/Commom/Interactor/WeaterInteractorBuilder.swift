@@ -8,15 +8,15 @@
 
 import Foundation
 
-class WheaterInteractorBuilder {
+class WeaterInteractorBuilder {
     
-    static func make(metric: Units) -> WheaterInteractor {
+    static func make(metric: Units) -> WeaterInteractor {
         
-        let manager = WheaterManager.shared
+        let manager = WeaterManager.shared
         
         let locationManager = LocationManager.shared
         
-        let interactor = WheaterInteractor(manager: manager, locationManager: locationManager, metric: metric)
+        let interactor = WeaterInteractor(manager: manager, locationManager: locationManager, metric: metric)
         
         manager.output = interactor
         

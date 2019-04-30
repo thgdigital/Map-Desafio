@@ -14,9 +14,9 @@ protocol SplitInterarctorInput {
 
 class SplitInterarctor: SplitInterarctorInput {
     
-    var manager: WheaterManager
+    var manager: WeaterManager
     
-    init(manager: WheaterManager) {
+    init(manager: WeaterManager) {
         self.manager = manager
     }
     

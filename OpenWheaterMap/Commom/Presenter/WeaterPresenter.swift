@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol WheaterPresenterInput {
+protocol WeaterPresenterInput {
     func viewDidLoad()
     func didChanger(with unit: Units)
 }
 
-@objc protocol WheaterPresenterOuput: NSObjectProtocol {
+@objc protocol WeaterPresenterOuput: NSObjectProtocol {
     @objc func alertView(title: String, description: String)
     @objc func startLoading()
     @objc func hiddenLoading()
@@ -27,15 +27,15 @@ enum Units: String {
     case metric = "metric"
 }
 
-class WheaterPresenter: WheaterPresenterInput {
+class WeaterPresenter: WeaterPresenterInput {
     
-    weak var output: WheaterPresenterOuput?
-    var interactor: WheaterInteractorInput
+    weak var output: WeaterPresenterOuput?
+    var interactor: WeaterInteractorInput
     var wirefreame: SplitWireframe
     
     let radius: Double = 30000
     
-    init(wirefreame: SplitWireframe, interactor: WheaterInteractorInput) {
+    init(wirefreame: SplitWireframe, interactor: WeaterInteractorInput) {
         self.wirefreame = wirefreame
         self.interactor = interactor
     }
@@ -50,7 +50,7 @@ class WheaterPresenter: WheaterPresenterInput {
     }
 }
 
-extension WheaterPresenter: WheaterInteractorOutput {
+extension WeaterPresenter: WeaterInteractorOutput {
     
     func udpdateLocation(location: LocationEntity) {
         self.output?.startMap?(lat: location.lat, long: location.lng, radius: radius)

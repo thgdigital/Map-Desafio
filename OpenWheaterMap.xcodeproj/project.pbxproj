@@ -14,9 +14,9 @@
 		AF7A978422747B4F001DA3A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7A978222747B4F001DA3A1 /* LaunchScreen.storyboard */; };
 		AF7A978F22747B4F001DA3A1 /* OpenWheaterMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A978E22747B4F001DA3A1 /* OpenWheaterMapTests.swift */; };
 		AF7A97A122747C71001DA3A1 /* SplitWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97A022747C71001DA3A1 /* SplitWireframe.swift */; };
-		AF7A97A322747C92001DA3A1 /* WheaterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97A222747C92001DA3A1 /* WheaterInteractor.swift */; };
-		AF7A97A522747CC8001DA3A1 /* WheaterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97A422747CC8001DA3A1 /* WheaterPresenter.swift */; };
-		AF7A97A722747CFC001DA3A1 /* WheaterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97A622747CFC001DA3A1 /* WheaterManager.swift */; };
+		AF7A97A322747C92001DA3A1 /* WeaterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97A222747C92001DA3A1 /* WeaterInteractor.swift */; };
+		AF7A97A522747CC8001DA3A1 /* WeaterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97A422747CC8001DA3A1 /* WeaterPresenter.swift */; };
+		AF7A97A722747CFC001DA3A1 /* WeaterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97A622747CFC001DA3A1 /* WeaterManager.swift */; };
 		AF7A97A922748E04001DA3A1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97A822748E04001DA3A1 /* LocationManager.swift */; };
 		AF7A97AB2274940A001DA3A1 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97AA2274940A001DA3A1 /* LocationEntity.swift */; };
 		AF7A97AD227494E9001DA3A1 /* LocationEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97AC227494E9001DA3A1 /* LocationEntityMapper.swift */; };
@@ -27,13 +27,13 @@
 		AF7A97B92274AEB9001DA3A1 /* MainStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97B82274AEB9001DA3A1 /* MainStatus.swift */; };
 		AF7A97BB2274C037001DA3A1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF7A97BA2274C037001DA3A1 /* Default-568h@2x.png */; };
 		AF7A97BE2274C5CB001DA3A1 /* Extensios.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97BD2274C5CB001DA3A1 /* Extensios.swift */; };
-		AF7A97C02274C827001DA3A1 /* ListWheterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97BF2274C827001DA3A1 /* ListWheterViewController.swift */; };
+		AF7A97C02274C827001DA3A1 /* ListWeaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97BF2274C827001DA3A1 /* ListWeaterViewController.swift */; };
 		AF7A97C22274C9AF001DA3A1 /* SplitViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97C12274C9AF001DA3A1 /* SplitViewControllerBuilder.swift */; };
-		AF7A97CC2274CFB9001DA3A1 /* ListWheaterMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7A97CB2274CFB9001DA3A1 /* ListWheaterMap.storyboard */; };
-		AF7A97CE2274CFEB001DA3A1 /* ListWheterViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97CD2274CFEB001DA3A1 /* ListWheterViewControllerBuilder.swift */; };
+		AF7A97CC2274CFB9001DA3A1 /* ListWeaterMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7A97CB2274CFB9001DA3A1 /* ListWeaterMap.storyboard */; };
+		AF7A97CE2274CFEB001DA3A1 /* ListWeaterViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97CD2274CFEB001DA3A1 /* ListWeaterViewControllerBuilder.swift */; };
 		AF7A97D02274D0BC001DA3A1 /* ListWheaterMapWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97CF2274D0BC001DA3A1 /* ListWheaterMapWireframe.swift */; };
-		AF7A97D52274D8FB001DA3A1 /* WheaterPresenterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97D42274D8FB001DA3A1 /* WheaterPresenterBuilder.swift */; };
-		AF7A97D72274D974001DA3A1 /* WheaterInteractorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97D62274D974001DA3A1 /* WheaterInteractorBuilder.swift */; };
+		AF7A97D52274D8FB001DA3A1 /* WeaterPresenterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97D42274D8FB001DA3A1 /* WeaterPresenterBuilder.swift */; };
+		AF7A97D72274D974001DA3A1 /* WeaterInteractorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97D62274D974001DA3A1 /* WeaterInteractorBuilder.swift */; };
 		AF7A97D92274DBE8001DA3A1 /* WheterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97D82274DBE8001DA3A1 /* WheterItem.swift */; };
 		AF7A97DC22761577001DA3A1 /* SplitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97DB22761577001DA3A1 /* SplitPresenter.swift */; };
 		AF7A97DE22761602001DA3A1 /* SplitPresenterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A97DD22761602001DA3A1 /* SplitPresenterBuilder.swift */; };
@@ -58,9 +58,9 @@
 		AF7A980A227635AC001DA3A1 /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7A9808227635AC001DA3A1 /* WeatherTableViewCell.xib */; };
 		AF7A980C22763C2D001DA3A1 /* WeatherDisplayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A980B22763C2D001DA3A1 /* WeatherDisplayList.swift */; };
 		AF7A980E22763CB8001DA3A1 /* WeatherDisplayListMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A980D22763CB8001DA3A1 /* WeatherDisplayListMapper.swift */; };
-		AF7A9814227663E4001DA3A1 /* WheaterMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7A9813227663E4001DA3A1 /* WheaterMap.storyboard */; };
-		AF7A981622766409001DA3A1 /* WheaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A981522766409001DA3A1 /* WheaterMapViewController.swift */; };
-		AF7A9818227664F6001DA3A1 /* WheaterMapViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9817227664F6001DA3A1 /* WheaterMapViewControllerBuilder.swift */; };
+		AF7A9814227663E4001DA3A1 /* WeaterMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7A9813227663E4001DA3A1 /* WeaterMap.storyboard */; };
+		AF7A981622766409001DA3A1 /* WeaterMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A981522766409001DA3A1 /* WeaterMapViewController.swift */; };
+		AF7A9818227664F6001DA3A1 /* WeaterMapViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9817227664F6001DA3A1 /* WeaterMapViewControllerBuilder.swift */; };
 		AF7A981A227665B8001DA3A1 /* WheaterMapWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A9819227665B8001DA3A1 /* WheaterMapWireframe.swift */; };
 		AF7A981F22767108001DA3A1 /* ArtworkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A981E22767108001DA3A1 /* ArtworkItem.swift */; };
 		AF7A982122772909001DA3A1 /* ArtworkItemMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A982022772909001DA3A1 /* ArtworkItemMap.swift */; };
@@ -94,9 +94,9 @@
 		AF7A978E22747B4F001DA3A1 /* OpenWheaterMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWheaterMapTests.swift; sourceTree = "<group>"; };
 		AF7A979022747B4F001DA3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7A97A022747C71001DA3A1 /* SplitWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitWireframe.swift; sourceTree = "<group>"; };
-		AF7A97A222747C92001DA3A1 /* WheaterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterInteractor.swift; sourceTree = "<group>"; };
-		AF7A97A422747CC8001DA3A1 /* WheaterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterPresenter.swift; sourceTree = "<group>"; };
-		AF7A97A622747CFC001DA3A1 /* WheaterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterManager.swift; sourceTree = "<group>"; };
+		AF7A97A222747C92001DA3A1 /* WeaterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaterInteractor.swift; sourceTree = "<group>"; };
+		AF7A97A422747CC8001DA3A1 /* WeaterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaterPresenter.swift; sourceTree = "<group>"; };
+		AF7A97A622747CFC001DA3A1 /* WeaterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaterManager.swift; sourceTree = "<group>"; };
 		AF7A97A822748E04001DA3A1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		AF7A97AA2274940A001DA3A1 /* LocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
 		AF7A97AC227494E9001DA3A1 /* LocationEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntityMapper.swift; sourceTree = "<group>"; };
@@ -107,13 +107,13 @@
 		AF7A97B82274AEB9001DA3A1 /* MainStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStatus.swift; sourceTree = "<group>"; };
 		AF7A97BA2274C037001DA3A1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AF7A97BD2274C5CB001DA3A1 /* Extensios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensios.swift; sourceTree = "<group>"; };
-		AF7A97BF2274C827001DA3A1 /* ListWheterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWheterViewController.swift; sourceTree = "<group>"; };
+		AF7A97BF2274C827001DA3A1 /* ListWeaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWeaterViewController.swift; sourceTree = "<group>"; };
 		AF7A97C12274C9AF001DA3A1 /* SplitViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewControllerBuilder.swift; sourceTree = "<group>"; };
-		AF7A97CB2274CFB9001DA3A1 /* ListWheaterMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListWheaterMap.storyboard; sourceTree = "<group>"; };
-		AF7A97CD2274CFEB001DA3A1 /* ListWheterViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWheterViewControllerBuilder.swift; sourceTree = "<group>"; };
+		AF7A97CB2274CFB9001DA3A1 /* ListWeaterMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListWeaterMap.storyboard; sourceTree = "<group>"; };
+		AF7A97CD2274CFEB001DA3A1 /* ListWeaterViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWeaterViewControllerBuilder.swift; sourceTree = "<group>"; };
 		AF7A97CF2274D0BC001DA3A1 /* ListWheaterMapWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWheaterMapWireframe.swift; sourceTree = "<group>"; };
-		AF7A97D42274D8FB001DA3A1 /* WheaterPresenterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterPresenterBuilder.swift; sourceTree = "<group>"; };
-		AF7A97D62274D974001DA3A1 /* WheaterInteractorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterInteractorBuilder.swift; sourceTree = "<group>"; };
+		AF7A97D42274D8FB001DA3A1 /* WeaterPresenterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaterPresenterBuilder.swift; sourceTree = "<group>"; };
+		AF7A97D62274D974001DA3A1 /* WeaterInteractorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaterInteractorBuilder.swift; sourceTree = "<group>"; };
 		AF7A97D82274DBE8001DA3A1 /* WheterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheterItem.swift; sourceTree = "<group>"; };
 		AF7A97DB22761577001DA3A1 /* SplitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitPresenter.swift; sourceTree = "<group>"; };
 		AF7A97DD22761602001DA3A1 /* SplitPresenterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitPresenterBuilder.swift; sourceTree = "<group>"; };
@@ -138,9 +138,9 @@
 		AF7A9808227635AC001DA3A1 /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
 		AF7A980B22763C2D001DA3A1 /* WeatherDisplayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDisplayList.swift; sourceTree = "<group>"; };
 		AF7A980D22763CB8001DA3A1 /* WeatherDisplayListMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDisplayListMapper.swift; sourceTree = "<group>"; };
-		AF7A9813227663E4001DA3A1 /* WheaterMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WheaterMap.storyboard; sourceTree = "<group>"; };
-		AF7A981522766409001DA3A1 /* WheaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterMapViewController.swift; sourceTree = "<group>"; };
-		AF7A9817227664F6001DA3A1 /* WheaterMapViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterMapViewControllerBuilder.swift; sourceTree = "<group>"; };
+		AF7A9813227663E4001DA3A1 /* WeaterMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeaterMap.storyboard; sourceTree = "<group>"; };
+		AF7A981522766409001DA3A1 /* WeaterMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaterMapViewController.swift; sourceTree = "<group>"; };
+		AF7A9817227664F6001DA3A1 /* WeaterMapViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaterMapViewControllerBuilder.swift; sourceTree = "<group>"; };
 		AF7A9819227665B8001DA3A1 /* WheaterMapWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheaterMapWireframe.swift; sourceTree = "<group>"; };
 		AF7A981E22767108001DA3A1 /* ArtworkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkItem.swift; sourceTree = "<group>"; };
 		AF7A982022772909001DA3A1 /* ArtworkItemMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkItemMap.swift; sourceTree = "<group>"; };
@@ -309,7 +309,7 @@
 		AF7A97C52274CE25001DA3A1 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A980F227663A3001DA3A1 /* WheaterMap */,
+				AF7A980F227663A3001DA3A1 /* WeaterMap */,
 				AF7A97C62274CEB1001DA3A1 /* ListWheaterMap */,
 				AF7A979F22747C37001DA3A1 /* Split */,
 			);
@@ -336,9 +336,9 @@
 		AF7A97C92274CF3D001DA3A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A97BF2274C827001DA3A1 /* ListWheterViewController.swift */,
-				AF7A97CB2274CFB9001DA3A1 /* ListWheaterMap.storyboard */,
-				AF7A97CD2274CFEB001DA3A1 /* ListWheterViewControllerBuilder.swift */,
+				AF7A97BF2274C827001DA3A1 /* ListWeaterViewController.swift */,
+				AF7A97CB2274CFB9001DA3A1 /* ListWeaterMap.storyboard */,
+				AF7A97CD2274CFEB001DA3A1 /* ListWeaterViewControllerBuilder.swift */,
 				AF7A9807227635AC001DA3A1 /* WeatherTableViewCell.swift */,
 				AF7A9808227635AC001DA3A1 /* WeatherTableViewCell.xib */,
 				AF7A980B22763C2D001DA3A1 /* WeatherDisplayList.swift */,
@@ -360,8 +360,8 @@
 			children = (
 				AF7A97AA2274940A001DA3A1 /* LocationEntity.swift */,
 				AF7A97AC227494E9001DA3A1 /* LocationEntityMapper.swift */,
-				AF7A97A222747C92001DA3A1 /* WheaterInteractor.swift */,
-				AF7A97D62274D974001DA3A1 /* WheaterInteractorBuilder.swift */,
+				AF7A97A222747C92001DA3A1 /* WeaterInteractor.swift */,
+				AF7A97D62274D974001DA3A1 /* WeaterInteractorBuilder.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -369,8 +369,8 @@
 		AF7A97D22274D1DE001DA3A1 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A97A422747CC8001DA3A1 /* WheaterPresenter.swift */,
-				AF7A97D42274D8FB001DA3A1 /* WheaterPresenterBuilder.swift */,
+				AF7A97A422747CC8001DA3A1 /* WeaterPresenter.swift */,
+				AF7A97D42274D8FB001DA3A1 /* WeaterPresenterBuilder.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -379,7 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				AF7A97A822748E04001DA3A1 /* LocationManager.swift */,
-				AF7A97A622747CFC001DA3A1 /* WheaterManager.swift */,
+				AF7A97A622747CFC001DA3A1 /* WeaterManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -427,12 +427,12 @@
 			path = Item;
 			sourceTree = "<group>";
 		};
-		AF7A980F227663A3001DA3A1 /* WheaterMap */ = {
+		AF7A980F227663A3001DA3A1 /* WeaterMap */ = {
 			isa = PBXGroup;
 			children = (
 				AF7A9810227663B9001DA3A1 /* User Interface */,
 			);
-			path = WheaterMap;
+			path = WeaterMap;
 			sourceTree = "<group>";
 		};
 		AF7A9810227663B9001DA3A1 /* User Interface */ = {
@@ -455,9 +455,9 @@
 		AF7A9812227663C9001DA3A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A9813227663E4001DA3A1 /* WheaterMap.storyboard */,
-				AF7A981522766409001DA3A1 /* WheaterMapViewController.swift */,
-				AF7A9817227664F6001DA3A1 /* WheaterMapViewControllerBuilder.swift */,
+				AF7A9813227663E4001DA3A1 /* WeaterMap.storyboard */,
+				AF7A981522766409001DA3A1 /* WeaterMapViewController.swift */,
+				AF7A9817227664F6001DA3A1 /* WeaterMapViewControllerBuilder.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -564,10 +564,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF7A978422747B4F001DA3A1 /* LaunchScreen.storyboard in Resources */,
-				AF7A9814227663E4001DA3A1 /* WheaterMap.storyboard in Resources */,
+				AF7A9814227663E4001DA3A1 /* WeaterMap.storyboard in Resources */,
 				AF7A97BB2274C037001DA3A1 /* Default-568h@2x.png in Resources */,
 				AF7A978122747B4F001DA3A1 /* Assets.xcassets in Resources */,
-				AF7A97CC2274CFB9001DA3A1 /* ListWheaterMap.storyboard in Resources */,
+				AF7A97CC2274CFB9001DA3A1 /* ListWeaterMap.storyboard in Resources */,
 				AF7A980A227635AC001DA3A1 /* WeatherTableViewCell.xib in Resources */,
 				AF7A977F22747B48001DA3A1 /* Main.storyboard in Resources */,
 			);
@@ -667,17 +667,17 @@
 				AF7A97B122749959001DA3A1 /* ListWeatherMapModel.swift in Sources */,
 				AF7A977A22747B48001DA3A1 /* AppDelegate.swift in Sources */,
 				AF7A97E122761BD5001DA3A1 /* ListWeatherEntity.swift in Sources */,
-				AF7A97C02274C827001DA3A1 /* ListWheterViewController.swift in Sources */,
+				AF7A97C02274C827001DA3A1 /* ListWeaterViewController.swift in Sources */,
 				AF7A97E922761FA4001DA3A1 /* LocationCityEntity.swift in Sources */,
 				AF7A97EB22761FDB001DA3A1 /* WeatherEntity.swift in Sources */,
-				AF7A97D72274D974001DA3A1 /* WheaterInteractorBuilder.swift in Sources */,
+				AF7A97D72274D974001DA3A1 /* WeaterInteractorBuilder.swift in Sources */,
 				AF7A97AD227494E9001DA3A1 /* LocationEntityMapper.swift in Sources */,
 				AF7A97F822762690001DA3A1 /* LocationCityItem.swift in Sources */,
 				AF7A982122772909001DA3A1 /* ArtworkItemMap.swift in Sources */,
-				AF7A97CE2274CFEB001DA3A1 /* ListWheterViewControllerBuilder.swift in Sources */,
+				AF7A97CE2274CFEB001DA3A1 /* ListWeaterViewControllerBuilder.swift in Sources */,
 				AF7A97B92274AEB9001DA3A1 /* MainStatus.swift in Sources */,
 				AF7A97F322762452001DA3A1 /* MainStatusEntityMapper.swift in Sources */,
-				AF7A9818227664F6001DA3A1 /* WheaterMapViewControllerBuilder.swift in Sources */,
+				AF7A9818227664F6001DA3A1 /* WeaterMapViewControllerBuilder.swift in Sources */,
 				AF7A97DE22761602001DA3A1 /* SplitPresenterBuilder.swift in Sources */,
 				AF7A97EF22762161001DA3A1 /* LocationCityEntityMapper.swift in Sources */,
 				AF7A980E22763CB8001DA3A1 /* WeatherDisplayListMapper.swift in Sources */,
@@ -687,27 +687,27 @@
 				AF7A97A122747C71001DA3A1 /* SplitWireframe.swift in Sources */,
 				AF7A97B72274A887001DA3A1 /* WeatherModel.swift in Sources */,
 				AF7A9825227770D1001DA3A1 /* SplitInterarctor.swift in Sources */,
-				AF7A981622766409001DA3A1 /* WheaterMapViewController.swift in Sources */,
+				AF7A981622766409001DA3A1 /* WeaterMapViewController.swift in Sources */,
 				AF7A97E322761C33001DA3A1 /* WeatherMapEntity.swift in Sources */,
 				AF7A97C22274C9AF001DA3A1 /* SplitViewControllerBuilder.swift in Sources */,
 				AF7A97A922748E04001DA3A1 /* LocationManager.swift in Sources */,
-				AF7A97A522747CC8001DA3A1 /* WheaterPresenter.swift in Sources */,
+				AF7A97A522747CC8001DA3A1 /* WeaterPresenter.swift in Sources */,
 				AF7A97AB2274940A001DA3A1 /* LocationEntity.swift in Sources */,
 				AF7A980022762919001DA3A1 /* WeatherMapItem.swift in Sources */,
 				AF7A97E722761EDD001DA3A1 /* WeatherMapEntityMapper.swift in Sources */,
 				AF7A9802227629CC001DA3A1 /* WeaterItemMapper.swift in Sources */,
-				AF7A97A722747CFC001DA3A1 /* WheaterManager.swift in Sources */,
+				AF7A97A722747CFC001DA3A1 /* WeaterManager.swift in Sources */,
 				AF7A9809227635AC001DA3A1 /* WeatherTableViewCell.swift in Sources */,
 				AF7A98272277717C001DA3A1 /* SplitInterarctorBuilder.swift in Sources */,
 				AF7A97FA22762712001DA3A1 /* LocationCityItemMapper.swift in Sources */,
 				AF7A980622762B3D001DA3A1 /* MainStatusItemMapper.swift in Sources */,
 				AF7A980C22763C2D001DA3A1 /* WeatherDisplayList.swift in Sources */,
 				AF7A981F22767108001DA3A1 /* ArtworkItem.swift in Sources */,
-				AF7A97D52274D8FB001DA3A1 /* WheaterPresenterBuilder.swift in Sources */,
+				AF7A97D52274D8FB001DA3A1 /* WeaterPresenterBuilder.swift in Sources */,
 				AF7A97D92274DBE8001DA3A1 /* WheterItem.swift in Sources */,
 				AF7A97E522761DC7001DA3A1 /* ListWeatherEntityMapper.swift in Sources */,
 				AF7A97F122762386001DA3A1 /* WeatherEntityMapper.swift in Sources */,
-				AF7A97A322747C92001DA3A1 /* WheaterInteractor.swift in Sources */,
+				AF7A97A322747C92001DA3A1 /* WeaterInteractor.swift in Sources */,
 				AF7A97BE2274C5CB001DA3A1 /* Extensios.swift in Sources */,
 				AF7A981A227665B8001DA3A1 /* WheaterMapWireframe.swift in Sources */,
 				AF7A97B32274A5ED001DA3A1 /* WeatherMapModel.swift in Sources */,

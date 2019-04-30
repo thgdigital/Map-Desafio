@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Wheter View Controller-->
+        <!--List Weater View Controller-->
         <scene sceneID="plp-m8-l5B">
             <objects>
-                <viewController storyboardIdentifier="ListWheterViewController" id="JfA-Jg-MS1" customClass="ListWheterViewController" customModule="OpenWheaterMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListWeaterViewController" id="JfA-Jg-MS1" customClass="ListWeaterViewController" customModule="OpenWheaterMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xe4-SA-rOG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

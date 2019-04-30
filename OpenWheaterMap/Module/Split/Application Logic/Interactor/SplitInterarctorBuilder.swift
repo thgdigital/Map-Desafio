@@ -12,7 +12,7 @@ import Foundation
 class SplitInterarctorBuilder {
     
     static func make() -> SplitInterarctor {
-       let manager = WheaterManager.shared
+       let manager = WeaterManager.shared
        return SplitInterarctor(manager: manager)
     }
 }

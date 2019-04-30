@@ -8,12 +8,12 @@
 
 import Foundation
 import UIKit
-class ListWheaterMapWireframe {
+class ListWeaterMapWireframe {
     
-    var viewController: ListWheterViewController?
+    var viewController: ListWeaterViewController?
     
     func make(wireframe: SplitWireframe, metric: Units) -> UIViewController {
-        viewController = ListWheterViewControllerBuilder().make(wireframe: wireframe, metric: metric)
+        viewController = ListWeaterViewControllerBuilder().make(wireframe: wireframe, metric: metric)
         return viewController!
     }
 }

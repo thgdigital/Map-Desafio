@@ -26,7 +26,7 @@ class SplitWireframe {
            
             self.removeAll(container: viewController.containerView, viewController: self.viewController)
             
-            let listViewcontroller = ListWheaterMapWireframe().make(wireframe: self, metric: metric)
+            let listViewcontroller = ListWeaterMapWireframe().make(wireframe: self, metric: metric)
             
             self.addView(view: listViewcontroller.view, container: viewController.containerView)
 
@@ -43,7 +43,7 @@ class SplitWireframe {
             
             self.removeAll(container: viewController.containerView, viewController: self.viewController)
             
-            let listViewcontroller = WheaterMapWireframe().make(wireframe: self, metric: metric)
+            let listViewcontroller = WeaterMapWireframe().make(wireframe: self, metric: metric)
             
             self.addView(view: listViewcontroller.view, container: viewController.containerView)
             

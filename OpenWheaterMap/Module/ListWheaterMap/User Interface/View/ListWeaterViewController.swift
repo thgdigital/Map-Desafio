@@ -9,9 +9,9 @@
 import UIKit
 import RNActivityView
 
-class ListWheterViewController: UIViewController {
+class ListWeaterViewController: UIViewController {
     
-    var presenter: WheaterPresenterInput?
+    var presenter: WeaterPresenterInput?
     
     var item: [WeatherMapItem] = []
     
@@ -45,7 +45,7 @@ class ListWheterViewController: UIViewController {
  
 }
 
-extension ListWheterViewController: UITableViewDelegate, UITableViewDataSource{
+extension ListWeaterViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return item.count
@@ -60,7 +60,7 @@ extension ListWheterViewController: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-extension ListWheterViewController: WheaterPresenterOuput {
+extension ListWeaterViewController: WeaterPresenterOuput {
     
     func startLoading() {
         executeOnMainQueue {

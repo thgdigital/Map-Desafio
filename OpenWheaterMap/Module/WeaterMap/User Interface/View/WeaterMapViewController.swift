@@ -12,9 +12,9 @@ import CoreLocation
 import SDWebImage
 import RNActivityView
 
-class WheaterMapViewController: UIViewController {
+class WeaterMapViewController: UIViewController {
     
-    var presenter: WheaterPresenterInput?
+    var presenter: WeaterPresenterInput?
     
     var items: [ArtworkItem] = []
     
@@ -32,7 +32,7 @@ class WheaterMapViewController: UIViewController {
         
     }
 }
-extension WheaterMapViewController: MKMapViewDelegate {
+extension WeaterMapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -59,7 +59,7 @@ extension WheaterMapViewController: MKMapViewDelegate {
     }
 }
 
-extension WheaterMapViewController: WheaterPresenterOuput {
+extension WeaterMapViewController: WeaterPresenterOuput {
     
     func startLoading() {
         executeOnMainQueue {

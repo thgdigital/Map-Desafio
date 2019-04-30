@@ -10,20 +10,20 @@ import Foundation
 import ObjectMapper
 import Alamofire
 
-protocol WheaterManagerOutput: class {
+protocol WeaterManagerOutput: class {
     func fetch(entity: ListWeatherEntity)
     func error(error: Error)
     func startLoading()
     func hiddenLoading()
 }
 
-class WheaterManager {
+class WeaterManager {
     
-    weak var output: WheaterManagerOutput?
+    weak var output: WeaterManagerOutput?
     
     var baseUrl: String = "http://api.openweathermap.org/data/2.5/find"
     
-    static var shared = WheaterManager()
+    static var shared = WeaterManager()
     
     var location: LocationEntity? = nil
     
