@@ -31,6 +31,8 @@ class WheaterInteractor: WheaterInteractorInput {
     
     var locationEntity: LocationEntity = LocationEntity()
     
+    var listWeatherEntity = ListWeatherEntity()
+    
     weak var output: WheaterInteractorOutput?
     
     init(manager: WheaterManager, locationManager: LocationManager, metric: Units) {
@@ -61,13 +63,14 @@ extension WheaterInteractor: WheaterManagerOutput {
     
     
     func fetch(entity: ListWeatherEntity) {
-        self.output?.fetched(items: WeatherMapItemMapper.make(from: entity.weatherMap))
+        self.listWeatherEntity = entity
+        self.output?.fetched(items: WeatherMapItemMapper.make(from: entity.weatherMap, myLocation: self.locationEntity))
     }
     
     func error(error: Error) {
         self.output?.didError(with: error)
     }
-
+    
 }
 
 extension WheaterInteractor: LocationManagerOutput{

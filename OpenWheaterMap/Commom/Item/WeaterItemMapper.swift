@@ -1,5 +1,5 @@
 //
-//  WheterItemMapper.swift
+//  WeaterItemMapper.swift
 //  OpenWheaterMap
 //
 //  Created by THIAGO on 28/04/19.
@@ -7,12 +7,12 @@
 //
 
 import Foundation
+import CoreLocation
 
-
-class WheterItemMapper {
+class WeaterItemMapper {
     
-    static func make(from entity: WeatherEntity) -> WheterItem {
-        var item = WheterItem()
+    static func make(from entity: WeatherEntity) -> WeaterItem {
+        var item = WeaterItem()
         item.icon = entity.icon
         item.id = entity.id
         item.main = entity.main
@@ -20,7 +20,7 @@ class WheterItemMapper {
         return item
     }
     
-    static func make(from entity: [WeatherEntity]) -> [WheterItem] {
+    static func make(from entity: [WeatherEntity]) -> [WeaterItem] {
         return entity.map({ make(from: $0 )})
     }
 }

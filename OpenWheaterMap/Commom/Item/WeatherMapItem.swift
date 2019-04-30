@@ -12,6 +12,6 @@ class WeatherMapItem:  NSObject {
     var id: Int = 0
     var name: String = ""
     var coordCity: LocationCityItem = LocationCityItem()
-    var weather: [WheterItem] = [WheterItem]()
+    var weather: [WeaterItem] = [WeaterItem]()
     var mainStatus: MainStatusItem = MainStatusItem()
 }

@@ -31,4 +31,19 @@ class OpenWheaterMapTests: XCTestCase {
         }
     }
 
+    func testInteractor(){
+        let interactor = WheaterInteractorBuilder.make(metric: .metric)
+        XCTAssertEqual(interactor.unit, .metric)
+        XCTAssertNil(interactor.output, "Esta nil sua referencia de output de Interactor")
+    }
+    
+    func testPresenter(){
+        let wireframe = SplitWireframe()
+        let presenter = WheaterPresenterBuilder.make(wirefreame: wireframe , metric: .metric)
+        XCTAssertEqual(presenter.radius, 30000)
+        XCTAssertNil(presenter.output, "Esta vazio sua referencia de output de presenter")
+        
+    }
+    
 }
+

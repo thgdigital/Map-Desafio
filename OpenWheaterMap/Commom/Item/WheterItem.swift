@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct WheterItem {
+struct WeaterItem {
     var id: Int = 0
     var main: String = ""
     var message: String = ""
